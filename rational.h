@@ -18,7 +18,7 @@ class Rational
 
   public:
    void prompt();
-   Void display();
+   void display();
    void displayDecimal();
    
 };

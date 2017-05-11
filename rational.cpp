@@ -5,29 +5,34 @@
  ***************************************************************/
 
 #include "rational.h"
+#include <iostream>
 #include <iomanip>
+
+using namespace std;
 
 void Rational :: prompt(){
 
-   cout << "for the top number: ";
+   cout << "Top: ";
    cin >> top;
 
-   cout << "for the bottom number: ";
+   cout << "Bottom: ";
    cin >> bottom;
 
 }
 
 void Rational :: display(){
-   cout << top << "/" << bottom;
+   cout << top << "/" << bottom << endl;
    return;
 }
 
 void Rational :: displayDecimal(){
    cout.setf(ios::fixed);
    cout.setf(ios::showpoint);
-   cout.precision(3);
+   cout.precision(2);
 
-   cout << top / bottom << endl;
+   float value = (float)top / bottom;
+
+   cout << value << endl;
 
    return;
 }
