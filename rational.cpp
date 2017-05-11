@@ -5,5 +5,29 @@
  ***************************************************************/
 
 #include "rational.h"
+#include <iomanip>
 
-// put your method bodies here
+void Rational :: prompt(){
+
+   cout << "for the top number: ";
+   cin >> top;
+
+   cout << "for the bottom number: ";
+   cin >> bottom;
+
+}
+
+void Rational :: display(){
+   cout << top << "/" << bottom;
+   return;
+}
+
+void Rational :: displayDecimal(){
+   cout.setf(ios::fixed);
+   cout.setf(ios::showpoint);
+   cout.precision(3);
+
+   cout << top / bottom << endl;
+
+   return;
+}
